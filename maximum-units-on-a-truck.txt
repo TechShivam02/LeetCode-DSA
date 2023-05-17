@@ -1,0 +1,70 @@
+ struct interval{
+        int first;
+        int last;
+    };
+
+
+    bool firstvalue(interval a , interval b){
+        return a.last < b.last;
+    }
+
+class Solution {
+public:
+    
+  
+   
+    
+    int maximumUnits(vector<vector<int>>& boxes, int truckSize) {
+        
+        
+        
+        vector<interval> vec;
+        
+        for(int i=0;i<boxes.size();i++){
+            
+            int fir = boxes[i][0];
+            int sec = boxes[i][1];
+            
+            vec.push_back({fir,sec});
+            
+        }
+        
+
+        sort(vec.begin() , vec.end(), firstvalue);
+        
+        
+        
+        reverse(vec.begin(),vec.end());
+        
+        
+        int rem=truckSize;
+        
+        int ans=0;
+        for(int i=0;i<vec.size();i++){
+            
+          
+            int first  = vec[i].first;
+            int last = vec[i].last;
+            
+            
+            int total = first*last;
+            
+            if(rem <first){
+                ans += rem*last;
+                return ans;
+            }
+
+            else{
+                ans += total;
+                rem -= first;
+            }
+            
+        }
+        
+        
+        
+        
+        return ans;
+        
+        
+    }
