@@ -1,0 +1,33 @@
+int maximumProduct(vector<int>& nums) {
+        
+        
+        sort(nums.begin(),nums.end());
+        
+        int n = nums.size();
+        
+        int finalans=-1*1e9;
+        
+        
+        int lastans = nums[n-1] * nums[n-2] * nums[n-3];
+        
+        int firstans = nums[0]*nums[1]*nums[2];
+        
+        finalans = max(lastans , firstans);
+        
+        int i=0;
+        int j=n-1;
+        
+        int k=i+1;
+        
+        while(k < j){
+            int ans = nums[i] * nums[j] * nums[k];
+            
+            finalans= max(finalans , ans);
+            
+            k++;
+        }
+        
+        return finalans;
+        
+        
+    }
