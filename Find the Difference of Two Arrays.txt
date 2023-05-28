@@ -1,8 +1,9 @@
- set<int> s1, s2;
+ 	set<int> s1, s2;
         
-        for(auto it:nums1)
+        for(auto it:nums1){
+
             s1.insert(it);
-        
+}        
         for(auto it:nums2)
             s2.insert(it);
         
