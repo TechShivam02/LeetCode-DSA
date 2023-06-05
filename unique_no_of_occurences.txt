@@ -17,7 +17,7 @@ bool uniqueOccurrences(vector<int>& arr) {
         int n=ans.size();
         int y=st.size();
     
-        if(n==y) return true;
+        if(n==y) {return true};
     
         return false;
         
