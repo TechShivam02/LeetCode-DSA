@@ -1,4 +1,8 @@
+<<<<<<< HEAD
   int sum=0;
+=======
+int sum=0;
+>>>>>>> 1b9f5d7a58aa7ed41a3a31b29d0ec3206c47d654
     int inorder(TreeNode* root,int L,int R)
     {
         if(root){
