@@ -1,5 +1,12 @@
+<<<<<<< HEAD
  int arrangeCoins(int n) {
         
         return (int)((sqrt(1 + 8*(long)n) - 1)/2);
         
+=======
+ int arrangeCoins(int n) {
+        
+        return (int)((sqrt(1 + 8*(long)n) - 1)/2);
+        
+>>>>>>> 3fcb28bc12cd564545b35665268b261a0602d0c8
     }

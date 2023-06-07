@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 string reverseStr(string s, int k) {
         
         for (int i = 0; i < s.size(); i += 2*k) {
             reverse(s.begin()+i, min(s.begin()+i+k, s.end()));
         }
+=======
+string reverseStr(string s, int k) {
+        
+        for (int i = 0; i < s.size(); i += 2*k) {
+            reverse(s.begin()+i, min(s.begin()+i+k, s.end()));
+        }
+>>>>>>> 3fcb28bc12cd564545b35665268b261a0602d0c8
         return s;

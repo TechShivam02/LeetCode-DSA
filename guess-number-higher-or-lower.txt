@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     int guessNumber(int n) {
         
@@ -16,4 +17,24 @@
         }
         
         
+=======
+
+    int guessNumber(int n) {
+        
+          int maxNumber = n, minNumber = 1;
+        while (true) {
+            int meanNumber = (maxNumber - minNumber) / 2 + minNumber;
+            
+            int res = guess(meanNumber);
+            if (res == 0) { 
+                return meanNumber;
+            } else if (res == 1) {
+                minNumber = meanNumber + 1;
+            } else {
+                maxNumber = meanNumber - 1;
+            }
+        }
+        
+        
+>>>>>>> 3fcb28bc12cd564545b35665268b261a0602d0c8
     }
